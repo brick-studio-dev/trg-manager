@@ -1,5 +1,10 @@
 # TRG Manager — Sistema de gestión moderno
 
+Aplicación de gestión para talleres mecánicos: clientes, vehículos,
+reparaciones y facturación en un solo sitio, pensada para reemplazar la hoja
+de cálculo o el cuaderno en papel que todavía usan muchos talleres.
+Desplegada y en uso real (acceso mediante login, sin registro público).
+
 Stack: **React + Vite** → **Vercel** (gratis) + **Supabase** (gratis)
 
 ---
