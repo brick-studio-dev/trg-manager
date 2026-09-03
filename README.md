@@ -1,56 +1,56 @@
-# TRG Manager — Sistema de gestión moderno
+# TRG Manager — Modern Management System
 
-Aplicación de gestión para talleres mecánicos: clientes, vehículos,
-reparaciones y facturación en un solo sitio, pensada para reemplazar la hoja
-de cálculo o el cuaderno en papel que todavía usan muchos talleres.
-Desplegada y en uso real (acceso mediante login, sin registro público).
+Management app for auto repair shops: clients, vehicles, repairs and
+invoicing in one place, built to replace the spreadsheet or paper notebook
+many shops still use. Deployed and in real use (login required, no public
+sign-up).
 
-Stack: **React + Vite** → **Vercel** (gratis) + **Supabase** (gratis)
-
----
-
-## 🆕 Novedades en esta versión
-
-- **Panel rediseñado**: vehículos, clientes, reparaciones del mes (con tendencia y mini-gráfico) e importe facturado del año (con tendencia y mini-gráfico)
-- **Nueva reparación simplificada**: sin fecha promesa ni IVA, con importe opcional directo
-- **Fotografía de vehículo** opcional, sube y cambia foto desde la ficha del vehículo
+Stack: **React + Vite** → **Vercel** (free) + **Supabase** (free)
 
 ---
 
-## 🚀 Guía de instalación paso a paso
+## 🆕 What's new in this version
 
-### 1. Crear proyecto en Supabase
+- **Redesigned dashboard**: vehicles, clients, this month's repairs (with trend and mini-chart), and revenue billed this year (with trend and mini-chart)
+- **Simplified new repair flow**: no promised date or VAT field, optional direct amount
+- **Optional vehicle photo**: upload and change photo from the vehicle record
 
-1. Ve a [supabase.com](https://supabase.com) → **New project**
-2. Elige un nombre (ej. `taller-trg`) y región **EU West**
-3. Espera 1-2 min a que se cree la BD
+---
 
-### 2. Crear la base de datos
+## 🚀 Step-by-step setup guide
 
-1. En el Dashboard → **SQL Editor** → **New query**
-2. Copia y pega todo el contenido de `supabase/schema.sql`
-3. Pulsa **Run** → debe mostrar "Success"
+### 1. Create a Supabase project
 
-### 3. Crear usuario administrador
+1. Go to [supabase.com](https://supabase.com) → **New project**
+2. Pick a name (e.g. `taller-trg`) and region **EU West**
+3. Wait 1-2 min for the DB to be created
 
-En Supabase → **Authentication** → **Users** → **Add user**:
-- Email: el tuyo
-- Password: una contraseña segura
-- Marca "Auto Confirm User"
+### 2. Create the database
 
-### 4. Configurar variables de entorno
+1. In the Dashboard → **SQL Editor** → **New query**
+2. Copy and paste the full contents of `supabase/schema.sql`
+3. Click **Run** → should show "Success"
+
+### 3. Create an admin user
+
+In Supabase → **Authentication** → **Users** → **Add user**:
+- Email: yours
+- Password: a secure password
+- Check "Auto Confirm User"
+
+### 4. Configure environment variables
 
 ```bash
 cp .env.example .env.local
 ```
 
-Rellena con los valores de **Supabase → Settings → API**:
+Fill in with the values from **Supabase → Settings → API**:
 ```
 VITE_SUPABASE_URL=https://xxxxxxxxx.supabase.co
 VITE_SUPABASE_ANON_KEY=eyJhbGci...
 ```
 
-### 5. Instalar y arrancar en local
+### 5. Install and run locally
 
 ```bash
 npm install
@@ -59,24 +59,24 @@ npm run dev
 
 ---
 
-## ☁️ Desplegar en Vercel (gratis)
+## ☁️ Deploy to Vercel (free)
 
-1. Entra a [vercel.com/new](https://vercel.com/new) e importa este repositorio de GitHub.
-2. Vercel detecta automáticamente el preset **Vite** (build command `vite build`, output `dist`).
-3. Añade las variables de entorno (`VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`) antes de desplegar.
-4. Cada `git push` a `main` despliega automáticamente una nueva versión.
-
----
-
-## ⚠️ Importante: pausa por inactividad
-
-**Supabase** pausa los proyectos gratuitos tras ~7 días de inactividad. Para reactivarla: entra al dashboard → botón **"Restore project"**.
-
-Vercel no requiere reactivación manual: al estar conectado directamente al repo, cada cambio se despliega solo.
+1. Go to [vercel.com/new](https://vercel.com/new) and import this GitHub repository.
+2. Vercel auto-detects the **Vite** preset (build command `vite build`, output `dist`).
+3. Add the environment variables (`VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`) before deploying.
+4. Every `git push` to `main` automatically deploys a new version.
 
 ---
 
-## 📂 Estructura del proyecto
+## ⚠️ Important: pause after inactivity
+
+**Supabase** pauses free projects after ~7 days of inactivity. To restore it: open the dashboard → **"Restore project"**.
+
+Vercel doesn't need manual reactivation: since it's directly connected to the repo, every change deploys on its own.
+
+---
+
+## 📂 Project structure
 
 ```
 taller-trg/
