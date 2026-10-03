@@ -2,8 +2,8 @@
 
 Management app for auto repair shops: clients, vehicles, repairs and
 invoicing in one place, built to replace the spreadsheet or paper notebook
-many shops still use. Deployed and in real use (login required, no public
-sign-up).
+many shops still use. A working MVP — deployed and login-protected, not yet
+in day-to-day use at a shop.
 
 Stack: **React + Vite** → **Vercel** (free) + **Supabase** (free)
 
